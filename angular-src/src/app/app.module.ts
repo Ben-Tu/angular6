@@ -16,7 +16,6 @@ import { AuthService } from './services/auth.service';
 import { FlashMessagesModule } from 'angular2-flash-messages';
 import { AuthGuard } from './guards/auth.guard';
 
-
 const appRoutes: Routes = [
   {path:'',component: HomeComponent},
   {path:'register',component: RegisterComponent},
@@ -41,7 +40,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes),
-    FlashMessagesModule
+    FlashMessagesModule,
   ],
   providers: [ValidateService,AuthService,AuthGuard],
   bootstrap: [AppComponent]
